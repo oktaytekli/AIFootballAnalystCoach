@@ -1,0 +1,7 @@
+opencv-python
+ultralytics
+google-generativeai
+yt-dlp
+python-dotenv
+matplotlib
+numpy

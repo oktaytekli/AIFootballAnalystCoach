@@ -1,0 +1,79 @@
+/* static/css/style.css */
+
+/* --- FONT İMPORTLARI --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;600&display=swap');
+
+/* --- GENEL AYARLAR --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #020617; /* Slate-950 */
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* --- LANDING PAGE (ANASAYFA) EFEKTLERİ --- */
+
+/* Neon Yazı Efekti */
+.gradient-text {
+    background: linear-gradient(135deg, #4ade80 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(74, 222, 128, 0.3);
+}
+
+/* Cam Kart (Glassmorphism) */
+.glass-card {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(74, 222, 128, 0.3);
+    box-shadow: 0 15px 40px rgba(74, 222, 128, 0.15);
+}
+
+/* Parlayan Buton Efekti */
+.glow-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-button::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.glow-button:hover::after {
+    left: 100%;
+}
+
+/* --- DASHBOARD (PANEL) EFEKTLERİ --- */
+
+/* Sidebar Yumuşak Geçiş */
+.sidebar-transition {
+    transition: width 0.3s ease-in-out;
+}
+
+/* Menü Kapandığında Yazıları Gizle */
+.hide-text span {
+    display: none;
+    opacity: 0;
+}
+
+/* Aktif Menü Elemanı (Yeşil Çizgi ve Arka Plan) */
+.nav-item.active {
+    background: linear-gradient(90deg, rgba(74, 222, 128, 0.1) 0%, transparent 100%);
+    border-left: 4px solid #4ade80;
+    color: #4ade80;
+}
